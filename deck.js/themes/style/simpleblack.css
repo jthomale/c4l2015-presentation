@@ -236,6 +236,22 @@ li {
   box-sizing: border-box;
   width: 100%; }
 
+@font-face {
+  font-family: "GillSansMT";
+  src: url("gillsansmt.ttf"); }
+@font-face {
+  font-family: "GillSansMT";
+  src: url("gillsansmt_bold.ttf");
+  font-weight: bold; }
+@font-face {
+  font-family: "GillSansMT";
+  src: url("gillsansmt_italic.ttf");
+  font-style: italic; }
+@font-face {
+  font-family: "GillSansMT";
+  src: url("gillsansmt_bolditalic.ttf");
+  font-style: italic;
+  font-weight: bold; }
 h1 {
   color: #fff;
   font-weight: normal;
@@ -297,7 +313,7 @@ h1 .subtitle {
   text-shadow: 0 0 50px #f0a, 0 0 3px #fff; }
 
 .deck-container {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-family: "GillSansMT", Calibri, sans-serif;
   font-size: 1.75em;
   color: #aaa;
   background: #000; }
