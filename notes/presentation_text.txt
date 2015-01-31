@@ -1,0 +1,121 @@
+
+You Gotta Keep 'em Separated
+  The Case for "Bento Box" Discovery Interfaces
+
+  
+I'm Jason Thomale, I'm the Resource Discovery Systems Librarian at the University of North Texas. I'm here to make the case for "bento box" discovery interfaces.
+
+------
+
+So, I submit to you the following.
+
+------
+
+First the obligatory, here's where the "bento box" UI metaphor comes from. A Japanese lunch where
+
+------
+
+several different types of delicious food
+
+------
+
+are subdivided into little compartments.
+
+------
+
+Bento box.
+
+------
+
+And so here we have a search results UI where
+
+------
+
+results are subdivided
+
+------
+
+into compartments by category,
+
+------
+
+like a Japanese bento box. From University of Michigan Libraries. Which is great and all, but isn't this just another in a long line of library hacks and workarounds?
+
+------
+
+Well, last I'll show you another search results UI where, again,
+
+------
+
+results are subdivided
+
+------
+
+into compartments by category.
+
+------
+
+Bento box ...
+
+------
+
+[next next next]
+
+from Google!
+
+------
+
+Questions? [Hopefully pause for laughter] But seriously--I do have to fill 20 minutes, here...
+
+------
+
+so, yeah. In reality I just couldn't decide how to start my presentation--I created two separate beginnings, and I thought, why not use both? So that was the first one. 
+
+All right. As I said, I'm Jason Thomale, yada yada, and I'm going to try to make the case for Bento Box discovery interfaces.
+
+------
+
+The thing about talking about this at Code4lib is that the Code4lib community is professionally pretty diverse. And when we're talking about bento box interfaces, we have a distinct bias toward academic libraries.
+
+------
+
+I mean that *is* where the term originated and, as far as I know, that's mainly the context where it's used. I think the accepted story is that NCSU had the first bento box interface, and Tito Sierra (at NCSU at the time) coined the term to describe it.
+
+And--in academic libraries, we have sort of a collective history of implementing what we might call 
+
+------
+
+"hacks," especially when trying to facilitate a particular user experience on our websites. I don't mean this disparagingly, by the way, as we're all pretty much in the same boat. We often have to get
+
+------
+
+several different systems from several different vendors to play nicely together.
+
+------
+
+Sometimes we need to customize things that aren't easily customizable. 
+
+------
+
+Sometimes we need to try to get data out of systems that just don't want to give it up.
+
+------
+
+So we often bend our vendor systems to do things they weren't necessarily intended to do, using a little duct tape and bubble gum along the way.
+
+------
+
+That's not to say that our situations aren't better than they were, say, 10 years ago. Now open source software in libraries is thriving and it's become expected that our vendor systems offer APIs or some other easy way to get our data. 
+
+------
+
+And while this has allowed our hacks to become better and more sophisticated, at its heart a lot of what we do is still hacking things together to make them work. The bento box interface has pretty clearly come out of this. It's a "hack" in the sense that it's a local customization built as a workaround to allow us to solve particular problems, problems that we tend to think of as very specific to academic libraries--and in some ways even specific to each individual library.
+
+But more and more I've come to the conclusion that using a "Bento box" UI design for search results isn't JUST another library hack. It's more than JUST another workaround. It's actually a pretty elegant solution to problems that maybe are a little more universal than we might think. And THAT is the case I'm trying to make.
+
+------
+
+So first let's look really quickly at what a typical library bento box box implementation entails and what problems it's trying to solve. I'm going to use my institution as our example. And yes we are going to be looking at some stats here in a minute.
+
+------
+
