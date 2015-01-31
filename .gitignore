@@ -1,2 +1,3 @@
 docs/*
 *.pdf
+*/.sass-cache/*
