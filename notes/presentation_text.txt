@@ -127,7 +127,7 @@ Before we get into that, let's delve into "bento box UI as hack." What
 
 ------
 
-are the problems it was meant to solve?
+are the actual problems it was meant to solve?
 
 ------
 
@@ -145,7 +145,7 @@ So we say: let's make library systems more like Google!
 
 And what is Google?
 
-A single search box that searches a Web index and presents results in a single relevance-ranked list.
+A single search box that searches a Web index and presents results in a relevance-ranked list.
 
 And what are library systems?
 
@@ -173,7 +173,13 @@ Single search box? Check. Theoretically.
 
 All right. So let's talk about where bento box fits into this.
 
-The story of library discovery so far is basically one of hacks. Every single thing we've tried to do to be more like Google I think falls into the category of "hack." Or, if you prefer, "workaround." Workarounds for the simple fact that libraries aren't the Web. Libraries' resources are not Web resources, in terms of their content, structure, licensing, etc. Each 
+The story of library discovery so far is basically one of hacks. Or, if you prefer, "workarounds." Workarounds for the simple fact that libraries aren't the Web. Libraries' resources are not Web resources, in terms of their content, structure, licensing, etc.
+
+Of course, most workarounds have drawbacks. Web scale discovery, as useful as it truly is, has drawbacks. And those drawbacks are what bento box interfaces were designed to work around.
+
+The main drawback is that heterogenous types of resources being searched in one index mean that, even with great relevance ranking, smaller pools of resources can get drowned out by larger pools of resources. Someone might be looking for books
+
+(And sure--if you know what you're doing you can futz with the facets and find what you want, but users tend not to mess with facets much.)
 
 
 
