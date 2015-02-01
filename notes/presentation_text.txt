@@ -39,7 +39,7 @@ into compartments by category,
 
 ------
 
-like a Japanese bento box. From University of Michigan Libraries. Which is great and all, but isn't this just another in a long line of library hacks and workarounds?
+like a Japanese bento box. This is from University of Michigan Libraries. Which is great and all, but isn't this just another in a long line of library hacks and workarounds?
 
 ------
 
@@ -75,21 +75,25 @@ All right. As I said, I'm Jason Thomale, yada yada, and I'm going to try to make
 
 ------
 
-The thing about talking about this at Code4lib is that the Code4lib community is professionally pretty diverse. And when we're talking about bento box interfaces, we have a distinct bias toward academic libraries.
+The thing about talking about this at Code4lib is that the Code4lib community is professionally pretty diverse. And when we're talking about bento box interfaces,
+
+------
+
+we have a distinct bias toward academic libraries.
 
 ------
 
 I mean that *is* where the term originated and, as far as I know, that's mainly the context where it's used. I think the accepted story is that NCSU had the first bento box interface, and Tito Sierra (at NCSU at the time) coined the term to describe it.
 
-And--in academic libraries, we have sort of a collective history of implementing what we might call 
+And--especially in academic libraries, we have sort of a collective history of implementing what we might call 
 
 ------
 
-"hacks," especially when trying to facilitate a particular user experience on our websites. I don't mean this disparagingly, by the way, as we're all pretty much in the same boat. We often have to get
+"hacks," especially when trying to facilitate a particular user experience on our websites. I don't mean this disparagingly, by the way, as we're all pretty much in this boat. We often have to get
 
 ------
 
-several different systems from several different vendors to play nicely together.
+different systems from different vendors to play nicely together.
 
 ------
 
@@ -101,21 +105,92 @@ Sometimes we need to try to get data out of systems that just don't want to give
 
 ------
 
-So we often bend our vendor systems to do things they weren't necessarily intended to do, using a little duct tape and bubble gum along the way.
+Sometimes we just need to use a little duct tape to make things work together the way we want.
 
 ------
 
-That's not to say that our situations aren't better than they were, say, 10 years ago. Now open source software in libraries is thriving and it's become expected that our vendor systems offer APIs or some other easy way to get our data. 
+Granted, things are better than they used to be. Open source software in libraries is thriving, and it's become more or less the norm for vendors to offer APIs or other methods of getting at our data. 
 
 ------
 
-And while this has allowed our hacks to become better and more sophisticated, at its heart a lot of what we do is still hacking things together to make them work. The bento box interface has pretty clearly come out of this. It's a "hack" in the sense that it's a local customization built as a workaround to allow us to solve particular problems, problems that we tend to think of as very specific to academic libraries--and in some ways even specific to each individual library.
+And so we build better and more sophisticated hacks--like this lovely treadmill bike. Or bento box discovery interfaces.
 
-But more and more I've come to the conclusion that using a "Bento box" UI design for search results isn't JUST another library hack. It's more than JUST another workaround. It's actually a pretty elegant solution to problems that maybe are a little more universal than we might think. And THAT is the case I'm trying to make.
+But here's the thing; as I look at resource discovery solutions in libraries and outside of libraries, as I look at how users interact with our discovery systems,
+
+------
+
+I'm seeing bento box as an interesting type of UI for more reasons than just the solutions it provides for the immediate problems it was designed to work around. While it's true that those problems are real for academic libraries and bento box UIs are still attractive to us as a solution to those problems, I'm becoming more convinced that there's more to it than that.
 
 ------
 
-So first let's look really quickly at what a typical library bento box box implementation entails and what problems it's trying to solve. I'm going to use my institution as our example. And yes we are going to be looking at some stats here in a minute.
+Before we get into that, let's delve into "bento box UI as hack." What
 
 ------
+
+are the problems it was meant to solve?
+
+------
+
+<next>
+
+------
+
+I tried to think of a way to start this section that didn't involve telling this story, because it's one we all know so damn well. But I'll just refresh our memories and make sure we're all up to speed, all right? (Forgive the oversimplification.)
+
+------
+
+Years ago, library user studies show: Google--good, easy to use; library systems bad, hard to use.
+
+So we say: let's make library systems more like Google!
+
+And what is Google?
+
+A single search box that searches a Web index and presents results in a single relevance-ranked list.
+
+And what are library systems?
+
+Information silos! Many data stores, impossible to search at once, users have to know which ones to use or how to find out which ones to use. Different vendors, publishers, etc. not wanting to give up control of their content, yada yada.
+
+So we say: well, let's take a user's search and send it out to lots of systems at once for them! Yeah! So much like Google!
+
+Nope. Not like Google. Too slow. Too many possible endpoints. No way to relevance rank results effectively. Nobody likes to use it.
+
+So we say: we need a central index. That's what Google has.
+
+Some of us start putting stuff in Solr--catalog, digital collections, repository, library website. Stuff we can get. We put interfaces on top. Next Generation Catalogs, yeah! So awesome!
+
+Users say: but where's the articles?
+
+So we say: let's make deals with publishers and build a big ass central index. Vendors only, no open source. :-( Let's put the catalog and other stuff in it too for good measure. Yeah! Web scale discovery! 
+
+*Now* are we like Google? Let's see:
+
+Single index? Check.
+
+Single relevance-ranked results list? Check.
+
+Single search box? Check. Theoretically.
+
+All right. So let's talk about where bento box fits into this.
+
+The story of library discovery so far is basically one of hacks. Every single thing we've tried to do to be more like Google I think falls into the category of "hack." Or, if you prefer, "workaround." Workarounds for the simple fact that libraries aren't the Web. Libraries' resources are not Web resources, in terms of their content, structure, licensing, etc. Each 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
