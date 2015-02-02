@@ -105,7 +105,7 @@ Sometimes we need to try to get data out of systems that just don't want to give
 
 ------
 
-Sometimes we just need to use a little duct tape to make things work together the way we want.
+Sometimes we need to use a little duct tape to make things work together the way we want.
 
 ------
 
@@ -123,7 +123,7 @@ I'm seeing bento box as an interesting type of UI for more reasons than just the
 
 ------
 
-Before we get into that, let's delve into "bento box UI as hack." What
+Before we get to that, let's first delve into "bento box UI as hack." What
 
 ------
 
@@ -131,56 +131,79 @@ are the actual problems it was meant to solve?
 
 ------
 
-<next>
+To answer that, we have to get into the story of library discovery.
 
 ------
 
-I tried to think of a way to start this section that didn't involve telling this story, because it's one we all know so damn well. But I'll just refresh our memories and make sure we're all up to speed, all right? (Forgive the oversimplification.)
+And I really tried to think of a way to start this section that didn't involve telling this story, because it's one I think those of us in academic libraries know so damn well. And, maybe by association, the rest of Code4lib does as well. But, just in case, I'll refresh our memories and make sure we're all up to speed. (Forgive the oversimplification.)
 
 ------
 
-Years ago, library user studies show: Google--good, easy to use; library systems bad, hard to use.
+Over the years, library user studies have repeatedly said: Google--good, easy to use; library systems--bad, hard to use.
 
-So we say: let's make library systems more like Google!
+So we've said: let's make library systems more like Google!
 
-And what is Google?
+And what *is* Google?
 
 A single search box that searches a Web index and presents results in a relevance-ranked list.
 
 And what are library systems?
 
-Information silos! Many data stores, impossible to search at once, users have to know which ones to use or how to find out which ones to use. Different vendors, publishers, etc. not wanting to give up control of their content, yada yada.
+Information silos! Many data stores, impossible to search at once, users have to know which ones to use or how to find out which ones to use, interfaces are all different, searching takes forever, people have to use weird search syntax. Different vendors and publishers not wanting to give up control of their content.
 
-So we say: well, let's take a user's search and send it out to lots of systems at once for them! Yeah! So much like Google!
+So we said: well okay, let's try taking a user's search and sending it out to a bunch of databases for them at once. Let's even bring the results together on the fly into one list! Yeah! So much like Google!
 
-Nope. Not like Google. Too slow. Too many possible endpoints. No way to relevance rank results effectively. Nobody likes to use it.
+Nope. Not like Google. Too slow. Way too many possible endpoints and it can't search them all at once. No way to relevance rank results effectively.
 
-So we say: we need a central index. That's what Google has.
+So we said: all right, what we need is a central index. That's what Google has.
 
-Some of us start putting stuff in Solr--catalog, digital collections, repository, library website. Stuff we can get. We put interfaces on top. Next Generation Catalogs, yeah! So awesome!
+Some of us started putting stuff into Solr--catalog, digital collections, repository, library website. Stuff we could get. And we put interfaces on top. Next Generation Catalogs, yeah! So awesome!
 
-Users say: but where's the articles?
+Users said: but where's the articles?
 
-So we say: let's make deals with publishers and build a big ass central index. Vendors only, no open source. :-( Let's put the catalog and other stuff in it too for good measure. Yeah! Web scale discovery! 
+So we said: Okay. Let's make deals with publishers and build a big ass central index of licensed content. (So vendors only, no open source.) :-( Let's put the catalog and other stuff in it too for good measure. Yeah! Web scale discovery!
 
 *Now* are we like Google? Let's see:
 
-Single index? Check.
+Single index for our stuff? Check.
 
 Single relevance-ranked results list? Check.
 
-Single search box? Check. Theoretically.
+Single search box? Check.
 
-All right. So let's talk about where bento box fits into this.
+Okay. So...yeah. A lot like Google. Right?
 
-The story of library discovery so far is basically one of hacks. Or, if you prefer, "workarounds." Workarounds for the simple fact that libraries aren't the Web. Libraries' resources are not Web resources, in terms of their content, structure, licensing, etc.
+Meh. The similarities are only skin deep. What is it *really* that makes Google Google? Is it their search index? Is it their interface? Is it their style of search results?
 
-Of course, most workarounds have drawbacks. Web scale discovery, as useful as it truly is, has drawbacks. And those drawbacks are what bento box interfaces were designed to work around.
+It's the Web!
 
-The main drawback is that heterogenous types of resources being searched in one index mean that, even with great relevance ranking, smaller pools of resources can get drowned out by larger pools of resources. Someone might be looking for books
+When you have an information retrieval system working with billions or even just millions of documents, whether those are Web documents or something else, you're going to have trouble with precision. The thing that's going to make or break you is your relevance ranking. And Google figured out how to solve that for the Web. They took the things that make the Web the Web--the links between pages and the loosely structured, openly-available data stored in consistent document formats--and figured out how to leverage that to do great relevance ranking. *That's* what Google search is all about. That's what made them the best, and that's why people use them. We KNOW this.
 
-(And sure--if you know what you're doing you can futz with the facets and find what you want, but users tend not to mess with facets much.)
+At the heart of Google's success is their relevance ranking, and at the heart of that is the Web itself. The various conglomerations of resources that libraries offer are not the Web. And what is it that Web Scale Discovery systems have always had trouble with?
 
+Yup. Relevance ranking.
+
+So yeah users tell us they want us to be like Google because Google gets them to the information they want with little fuss. And, on our library websites, when trying to figure out how we want to direct users to find our resources, that's exactly what we're trying to do. If we funnel people to a system that looks, feels, and acts like Google but then doesn't actually return the most relevant results, are we doing what they want?
+
+Bento box UI design in libraries is an attempt to work around this problem. It does at least three things to help get people the information they need faster and more easily:
+
+1. Give more equal weight to resources from multiple systems that might otherwise be completely drowned out in a single results list. This helps bring a wider variety of things to users' attention and helps them get a better idea of what's available with less effort.
+
+2. Accommodate multiple and maybe incompatible usage scenarios by providing one place to search and then funnelling people to the resources they need in the particular systems that natively store and provide services over them (rather than serving as an endpoint itself).
+
+3. Separate results by resource type. For various reasons, students are often looking for one type of resource--such as articles, books, or databases--and they use these types of resources differently. Separating the results visually helps them find what they need by resource type more quickly. They don't have to futz around with filters and facets that they tend not to use anyway.
+
+From a strategic POV, bento box design also helps us maintain more control over our stuff and our UI. etc.
+
+[Paradox of user satisfaction with single-results-list WSD solutions and lack of clear evidence of what would work best.]
+
+At my institution, as we've made improvements to the resource discovery experience on our website over the past 4 years, there's been tons internal debate, discussion, and research to help us try to figure out what actually would best serve our users. We've been doing our own user research and following others'. We've been keeping an eye on what other libraries are doing. We went ahead and acquired a Web Scale Discovery system (Summon) a couple of years ago but actually recommended *against* dumping our catalog into it and using it as the full-library discovery interface because our user research up to that point suggested the main hole we wanted to use it to fill in our infrastructure was full-text article search. So for a couple of years, we ran it side-by-side with our catalog with the goal of seeing how people interacted with things and then working toward some kind of full library discovery interface--either something in Summon, bento box, or something else. Though honestly, for the reasons given, we were already leaning toward bento box.
+
+So we ran Summon as a "beta" during the first semester we had it and made it live at the same time we redesigned our website. In the redesign, we had a tabbed search box front-and-center and presented "Articles" and "Books and More" as the first two tabs. Articles searched Summon (limited to the Articles content type), and Books and More searched the catalog. On both search tabs we offered options for filtering searches. After that went live, we really didn't touch anything for a couple of years. We ran Google Analytics on both systems.
+
+So by this past September we'd accumulated over 3 years of data on our catalog and over 2 years of data on Summon, and at that point I decided to do some in-depth analysis on the data. We were already in the planning stages on a bento box design, but I wanted to see if the data held any useful information about how people used our existing discovery systems that might help inform our design. My focus was looking at how people used Summon vis a vis the Articles tab and how people used the catalog vis a vis the Books and More tab.
+
+So I wrote some Python scripts to pull data from Google Analytics using their API.
 
 
 
