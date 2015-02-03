@@ -1,3 +1,5 @@
 docs/
 *.pdf
 .sass-cache/
+*.pptx
+Thumbs.db
