@@ -79,7 +79,7 @@ we have a distinct bias toward academic libraries.
 
 ------
 
-I mean that *is* where the term originated and, as far as I know, that's mainly the context where it's used. I think the accepted story is that NCSU had the first bento box interface, and Tito Sierra (at NCSU at the time) coined the term to describe it.
+I mean that *is* where the term originated and, as far as I know, that's mainly the context where it's used.
 
 And--especially in academic libraries, we have sort of a collective history of implementing what we might call 
 
@@ -233,166 +233,490 @@ Yeah! So much like Google!
 
 Nope. Not like Google. Too slow. Way too many possible endpoints and we can't search them all at once. No way to rank results effectively.
 
--------
+------
 
-So we said:
+So we said: all right,
 
--------
+------
 
-all right, what we need is a central index. That's what Google has.
+what we need is a central index. That's what Google has.
 
--------
+------
 
 Some of us started putting stuff into Solr.
 
--------
+------
 
 But just stuff we could get. 
 
--------
+------
 
 And we put search interfaces on top. 
 
--------
+------
 
 Yeah! Next Generation Catalogs! So awesome!
 
--------
+------
 
 Users said: but where's the articles?
 
--------
+------
 
 So we said: 
 
--------
+------
 
 Fine. Let's make 
 
--------
+------
 
 deals with publishers and content providers,
 
--------
+------
 
-and build a big ass central index of licensed content. (Sorry--vendors only.) 
+and build a big ass central index of licensed content.
 
--------
-
-:-( 
-
--------
+------
 
 And let's put the catalog and other stuff in it too for good measure.
 
--------
+------
 
 Yeah! Web scale discovery!
 
 *Now* are we like Google?
 
--------
+------
 
 Let's see. Single index for our stuff?
 
--------
+------
 
 Check. Single relevance-ranked results list?
 
--------
+------
 
 Check. Single search box? 
 
--------
+------
 
 Check.
 
 Okay. So...yeah. 
 
--------
+------
 
 A lot like Google. Right?
 
 <next> <next>
 
--------
+------
 
-Meh. The similarities are skin deep. What is it *really* that makes Google Google? Is it the single index search? Is it the Google interface? Is it the Google style of search results?
+Meh. The similarities are skin deep.
 
-No, it's the Web!
+------
 
-More than that, it's how Google harnessed the unique properties of the Web--the hyperlinks, the loosely structured, openly-available data stored in consistent document formats--and figured out how to do solid relevance ranking for Web searches. *That's* what Google search is all about. That's what made them the best, and that's why people use them. We KNOW this.
+Look, what is it *really* that makes Google Google? 
 
-So, at the heart of Google's success is their relevance ranking, and at the heart of that is the Web itself. The various conglomerations of resources that libraries offer are not the Web. And what is it that Web Scale Discovery systems have always had trouble with?
+------
 
-Yup. Relevance ranking.
+Is it the Google interface?
 
-So yeah users tell us they want us to be like Google because Google gets them to the information they want with little fuss. And, on our library websites, when trying to figure out how we want to direct users to find our resources, that's exactly what we're trying to do. If we funnel people to a system that looks, feels, and acts like Google but then doesn't *actually* return the most relevant results, are we really doing what they want, no matter how satisfied they seem to be?
+------
 
-Bento box UI design in libraries is mainly an attempt to address this, to get people to the most relevant information faster and more easily than other approaches (including combined-results discovery).
+the single index search?
 
-1. It gives more equal weight to resources from multiple systems that might otherwise be completely drowned out in a single results list. This helps bring a wider variety of things to users' attention and helps them get a better idea of what's available with less effort.
+------
 
-2. It gets around the problem of library system silos by providing one place to search and then quickly funnelling people to the resources they need in the particular systems that natively store and provide services over those resources.
+the Google style of search results?
 
-3. It attempts to accommodate multiple and perhaps incompatible uses by separating results by resource type. Articles, books, databases, etc. are all different types of resources that have different uses. Separating results visually helps users zero in on the resource type they need more quickly. They don't have to futz around with filters and facets that they tend not to use anyway.
+------
 
-From a strategic POV, bento box design also has benefits: for one, libraries maintain more control over our primary search interface, relegating vendor interfaces to components that can be more switched out. (Of course this is only a benefit if you have the staff and expertise to build and maintain that interface. Otherwise it's probably a drawback.)
+No--
 
-So, I'm standing here talking to you like all of this is obvious, and you'd maybe assume that there's clear evidence to back me up that, number 1, the problems that bento box UIs were designed to solve actually exist and, number 2, that bento box UIs actually solve them. But if clear evidence existed, then we'd probably all have bento box UIs by now, and clearly we don't. In reality, the evidence, where it exists, is murky.
+------
 
-To be honest it seems that many user studies that have been done have shown that users do seem satisfied by the combined-results approach, primarily undergraduates. They like it for the same reasons they like Google: it's fast, easy, and it gets them *some* sort of results quickly. The relevance ranking, though not on par with Google, doesn't exactly suck, either. And so, maybe more often than not, it does work and it does satisfy users' needs (for some types of users and some types of needs).
+it's the Web itself.
 
-But other user studies suggest that most users come to the library interface knowing at a very broad level what type of resource they need to get (like articles vs books) and so they find results that blend them together confusing. They use different types of resources differently, and in a blended interface it takes effort for them to filter stuff because the relevance ranking doesn't do a good enough job of it.
+------
 
-I don't actually know how to reconcile these. But--the main reason I'm here talking to you today is because I might have something to add to the picture. Recently I completed an analysis of usage statistics of our discovery interfaces at UNT as they've evolved over the past 3 years. And it kind of hit me as being pretty good evidence to add to the "bento box" camp, although it maybe isn't as clear and unequivocal as we might want. It does support some things other libraries have found and maybe (hopefully) adds a little bit to the body of knowledge.
+More than that, it's how Google moved beyond full-text indexing 
 
-A little background. I've been at UNT for 4 years. During that time part of my job has been to help guide the planning and discussion about how we improve the resource discovery experience on our website. There's been tons internal debate, discussion, and research to help us try to figure out what actually would best serve our users. And we've been playing it conservatively. Here's a summary of relevant changes we've made.
+------
 
-In 2011 we redesigned our library catalog, which went live in September that year. We acquired and then ran Summon as a "beta" during Spring 2012. We opted not to put our catalog into Summon and basically treat it as an "articles" search, since that's what our user data suggested we most needed. We made Summon live at the same time we redesigned our website (September 2012). And, in the redesign, we featured a tabbed search box front and center (which we call the "Find box") and presented "Articles" and "Books and More" as the first two tabs. Articles was the default tab and searched Summon (limited to the Articles content type), and Books and More searched the catalog. Once our redesign went live, we really didn't touch anything for a couple of years, and we ran Google Analytics on both systems to collect stats.
+and actually harnessed the unique properties of the Web--
 
-So by September 2014 we'd accumulated 3 years of data on our catalog and over 2 years of data on Summon. At that point we were already in the planning stages on a bento box design, and I wanted to see if the data held any useful information about how people used our existing discovery systems. So that's when I did my analysis.
+------
 
-The primary question I was interested in answering was: do our users actually seem to use articles differently than they use books and other catalog materials? To answer that I needed to prove two things: one, that people *are* mainly using Summon as an articles search and they *are* mainly using the catalog to find books, media, etc.; and two, that the use patterns we see between those two systems is different enough to suggest different use cases for those types of materials.
+the hyperlinks, 
 
-To conduct the analysis, I first wrote Python scripts that pull data from each of our Google Analytics accounts--Summon and the catalog--using the GA API, for the period of August 2011 to August 2014. I focused on two different types of stats: pageviews, which I used as an approximation for number of searches, and search queries.
+------
 
-In order to help force pageviews into a useful approximation of searches (and to serve as a useful point of comparison), I filtered them by URL pattern. Anything that was not a hit on the first page of a search results screen got filtered out. Hits where a user changed search terms or used facets did not get filtered out and counted as additional searches. Views on search results screens that came from external sources--such as bookmarks--were also counted.
+the loosely structured, 
+
+------
+
+openly-available data stored in 
+
+------
+
+standard
+
+------
+
+machine-readable document formats--and figured out how to do 
+
+------
+
+crazy good relevance ranking for Web searches. *That's* what made them the best, and that's why people use them.
+
+------
+
+And library data just doesn't have the same characteristics as Web data. Though I know lots of folks working on Web Scale Discovery have made big strides, nobody has *solved* relevance ranking for full library discovery the way Google solved it for the Web.
+
+------
+
+So yeah users tell us they want us 
+
+------
+
+to be like Google 
+
+------
+
+because Google 
+
+------
+
+gets them to the information they want with little fuss. 
+
+------
+
+And, on our library websites, when we're trying to figure out how we want to direct different user groups with various and possibly incompatible tasks to find the resources they need to solve their tasks, that's what we're trying to do, too. 
+
+What we don't want 
+
+------
+
+is to funnel people to a system that looks, feels, and acts like Google but then 
+
+------
+
+fails to return the most relevant results for major categories of user tasks.
+
+------
+
+So Bento box UI design is a workaround for this problem. It's mainly an attempt by libraries to deliver a single search that works better across a wider variety of user scenarios, given the realities of library systems and data. There are at least three things that it does.
+
+------
+
+It gives more equal weight to resources from multiple systems that might otherwise drown each other out in a single results list. This helps bring a wider variety of things to users' attention and helps them get a better idea of what's available with less effort.
+
+------
+
+It tries to get around the problem of library system silos by providing one place to search and then quickly funnelling people to the resources they need in the particular systems that natively store and provide services over those resources.
+
+------
+
+And it attempts to accommodate multiple and perhaps incompatible uses by separating results by resource type. Articles, books, databases, etc. are all different types of resources that have different uses. Separating results visually helps users zero in on the resource type they need more quickly. They don't have to futz around with filters and facets that they tend not to use anyway.
+
+------
+
+From a strategic POV, bento box design also has benefits: mainly that libraries maintain more control over our primary search interface,
+
+------
+
+relegating vendor interfaces to components that can be more readily switched out. (Of course you have to have adequate technical staff and expertise to take advantage of this benefit.)
+
+------
+
+So. I'm standing up here talking to you like all of this is obvious, and you'd maybe assume that there's clear evidence to back me up that, number 1, 
+
+------
+
+the problems these UIs were designed to solve actually exist and, number 2, 
+
+------
+
+that these UIs actually solve them.
+
+------
+
+The truth is that the evidence isn't clear, especially when just looking at the user studies that have been published.
+
+------
+
+On the one hand you have the many user studies that have been done showing high user satisfaction with combined-results systems, primarily undergraduates.
+
+------
+
+And on the other hand you have user studies suggesting that most users come to the library interface knowing at a very broad level what type of resource they need to get (like articles vs books) and so results that blend them together are confusing.
+
+------
+
+I don't have the answers, but I might have something useful to add to the picture. 
+
+------
+
+Yes, that means it's almost time for stats show-and-tell.
+
+------
+
+First a little background. And yes, this is stuff you need to know.
+
+------
+
+I've been at UNT for 4 years. During that time part of my job has been to help 
+
+------
+
+guide the planning and discussion about how we improve the resource discovery experience on our website. There's been tons internal debate, discussion, and research to help us try to figure out what actually would best serve our users. And we've been playing it conservatively. Here's a summary of the most relevant changes we've made since I've been at UNT.
+
+------
+
+In 2011 we redesigned our library catalog, which went live in September of that year. 
+
+------
+
+We acquired and then ran Summon as a "beta" during Spring 2012. We opted not to put our catalog into Summon and basically treat it as an "articles" search, since that's what our user data suggested we most needed.
+
+------
+
+In September 2012, we released a website redesign and also made Summon live. In the redesign, we featured 
+
+------
+
+a tabbed search box front and center (which I'll refer to as the "Find box") and presented "Articles" and "Books and Media" as the first two tabs. Articles was the default tab and searched Summon (limited to the Articles content type), 
+
+------
+
+and Books and Media searched the catalog. Once our redesign went live, we didn't touch anything big for a couple of years, 
+
+------
+
+and we ran Google Analytics on both systems to collect stats.
+
+------
+
+So by September 2014
+
+------
+
+we'd accumulated 3 years of data on our catalog and over 2 years of data on Summon. By then we were already in the planning stages on a bento box design, 
+
+------
+
+and I wanted to see if the data held any useful information about how people used our existing discovery systems. So that's when I did my analysis.
+
+------
+
+The primary question I was interested in answering was: 
+
+------
+
+do our users actually seem to use articles differently than they use books and other catalog materials? And to answer that it seemed I needed to prove two things: one, that, in our environment, 
+
+------
+
+people *are* mainly using Summon as an articles search and
+
+------
+
+they *are* mainly using the catalog to find books, media, etc. And two 
+
+------
+
+that the use patterns we see between those two systems is different enough to suggest different use cases for those types of materials.
+
+------
+
+To conduct the analysis, I wrote Python scripts that 
+
+------
+
+pull data from each of the two Google Analytics accounts--Summon and the catalog--using the GA API, for the period of 
+
+------
+
+August 2011 to August 2014. I focused mainly on two different types of stats: 
+
+------
+
+pageviews and search queries.
+
+------
+
+I used pageviews as an approximation of searches. In order to do this and ensure I was comparing apples to apples in each system, I filtered by URL to remove anything that was not a hit on the first page of a search results screen. Hits where a user changed search terms or used facets counted as additional searches, and views on search results screens that came from external sources--such as bookmarks--were also counted.
 
 I used additional GA filters to look at different aspects of usage in each system, including the following:
 
+------
+
 Aggregate patterns.
+
+------
+
 Distance usage.
+
+------
+
 Usage coming from the Find Box on the homepage compared to direct usage.
-Usage of search options on the Find Box.
-Usage of search options such as index and collection searches in the catalog.
-Usage of search options such as facets and filters in Summon.
 
-With search queries I attempted to do some rough query analysis, although dealing with the sheer amount of data is tough without some advanced natural language processing chops. I mainly looked at the top 100 queries in each system--top 100 queries total and top 100 entered via the Find Box. I also attempted to normalize queries (where I did basic case and punctuation normalization and removed stop words), and then I looked at the top 100 individual words, top 100 bigrams, and top 100 trigrams in each data set. Finally, I looked at the distribution of queries, words, bigrams, and trigrams in each system, and I looked at query length.
+------
 
-All right, so--no surprise here, but, generally speaking, I think my findings confirm that people *do* use these two systems differently and that the assumption that they understand they're working with different resource types in each one is valid--enough, I think, to help make an argument for bento box UI design.
+And usage of search options, including use of the options on the Find Box as well as usage of search options within each system--index and collection searches in the catalog and facets and filters in Summon.
 
-We'll start with aggregate stats for each system. Here's where we implemented Summon as a beta service, and here's where that went live. So during this entire period, Summon and the catalog were both live, searchable via different tabs in our Find box. We didn't make any changes to either interface during this time that would have much of an effect on these stats.
+------
 
-In terms of absolute numbers, usage is almost equal. The catalog is still a little bit higher, but not by much. When we first implemented Summon, one thing that we hypothesized was that maybe Summon would completely cannibalize our catalog use--and that just hasn't happened. We clearly see a fairly sizeable drop in catalog use as we ramped up Summon implementation--but we don't see a wholesale switch from one system to the other.
+With search queries I attempted to do some rough query analysis, although dealing with the sheer amount of data is tough without some advanced natural language processing chops. 
 
-Next, we see two clearly different patterns of use in each system by semester. Here's fall, spring, fall, spring. There's more search activity in the catalog at the beginning of the semester, and then it drops off by the end. In Summon, we see the opposite pattern. Usage at the beginning of the semester is low, and it peaks near the end. (And I want to note that this is very similar to a pattern that NCSU Libraries also noticed in their systems, which they discuss in their paper, "How Users Search the Library from a Single Search Box.")
+I mainly looked at 
 
-Last thing I want to point out about this. Troughs that happen between semesters are deeper and wider in Summon than in the catalog. When a semester ends, Summon use drops off immediately and remains low until the next semester begins, while catalog use remains a little bit steadier during semester breaks. (With the exception of Christmas/New Years.)
+------
 
-Now let's look at distance usage. This shows searches in each system using two different metrics for "distance." It compares all searches (the red line) with searches coming from Denton, TX (where UNT is located, the blue line) and searches coming from the unt.edu domain ("on campus", the green line). Either way we slice it, we see that the catalog gets more of its use from local users and Summon gets more of its use from distance users.
+the top 100 queries in each system--
 
-Now let's look at usage of these two systems by where users started their search session--how they ended up in the system they ended up in. Here we see that 75.34% of search sessions in Summon start from the Find Box, while only 40% of catalog search sessions do. Catalog search sessions are almost as likely to start from the catalog home page. Origination from other sources is also pretty high, I think because we have some other entrance points like course reserves, a scoped media search, and a scoped music search, which all see a fair amount of use.
+------
 
-Okay next let's talk about queries.
+top 100 queries overall and 
 
-We see that the top queries in the catalog tend to be searches related to video games, films, television, and books. We also see a lot of searches in the catalog for particular resources--reference sources and serials especially. Looking at the top words, bigrams, and trigrams causes some music, literature, and history related terms and concepts to emerge.
+------
 
-In Summon, on the other hand, we mostly see queries related to academic topics or current events.
+top 100 entered via the Find Box. I also attempted 
 
-To be fair, we do see some similarities between the two systems as well. In both systems we see things like...naxos, lexis nexis, psycinfo, ebsco, and jstor. We also see some of the same terms cropping up in the top queries for both systems--some things you might expect like "higher education" and "university north texas" and some things you might not like "social media" and "human resource management."
+------
 
-And I also want to reiterate that, when I looked at queries, I also made sure to analyze JUST the queries coming from the Find Box both for Summon and the catalog in addition to the overall queries for each system. Although some of the search terms were different, I did see the same patterns.
+to normalize queries (where I did case and punctuation normalization and removed stop words), and then I looked at the top 100 
+
+------
+
+individual words, 
+
+------
+
+top 100 bigrams, 
+
+------
+
+and top 100 trigrams in each data set. Finally, I looked at 
+
+------
+
+the distribution of the frequency of queries, words, bigrams, and trigrams in each system and each interface, 
+
+------
+
+and I looked at query length.
+
+------
+
+All right, so--no surprise here, but, generally speaking, I think my findings confirm that people *do* use these two systems differently and that overall the assumption that they understand they're working with different resource types in each one is valid--enough, I think, to help make an argument for bento box UI design.
+
+------
+
+We'll start with aggregate stats for each system. 
+
+------
+
+Sorry, I know this is probably hard to see. On top here we show catalog searches and on bottom we show Summon searches, from August 2011 to August 2014.
+
+------
+
+Here you can see where we implemented Summon as a beta service
+
+------
+
+and starting here is where Summon went live. So during this entire period, Summon and the catalog were both live, searchable via different tabs in our Find box. We didn't make any substantial changes to either interface during this time that would have much of an effect on these stats.
+
+The first thing I want to note here, is that--
+
+------
+
+we see a dip in catalog usage here as we were ramping up Summon, 
+
+------
+
+but since Summon has been live, usage has equalized, and people have been using both systems in about equal amounts. In hindsight this might not be surprising, but, before we implemented Summon, we were a little curious whether or not Summon would cannibalize catalog use. Even after a couple of years, we see both a lot of search activity in Summon and people are still searching the catalog, which suggests that both systems are necessary if not that they outright fulfill different needs.
+
+Next I want to point out the two clearly different patterns of use in each system by semester. 
+
+------
+
+Each long semester in the catalog (Fall and Spring) shows activity starting high and then falling,
+
+------
+
+and in Summon, we see exactly the opposite pattern, where usage peaks near the end of the semester. (NCSU has noted that they've seen a similar pattern.) We can't say for sure what exactly this pattern means, but we can say that it shows different use between the two systems.
+
+Last thing I want to point out about this. 
+
+------
+
+You see these troughs that happen between semesters in each system. In Summon these are deeper and wider than 
+
+------
+
+they are in the catalog. When a semester ends, Summon use drops off immediately and remains low until the next semester begins, while catalog use remains a little bit steadier during semester breaks. (With the exception of Christmas/New Years.)
+
+------
+
+Now let's look at distance usage. 
+
+------
+
+This is actually showing local usage, using two different metrics for "local." It compares all searches (the red line) with searches coming from Denton, TX (where UNT is located, the blue line) and searches coming from the unt.edu domain ("on campus", the green line). Either one we look at, we see that the catalog gets substantially more use from local users than Summon.
+
+------
+
+In the catalog, 78.04% of use comes from Denton, and 57.29% of use comes from on-campus, 
+
+------
+
+while in Summon, 50.40% of use comes comes from Denton and only 25.38% of use comes from on-campus.
+
+------
+
+Next we'll look at usage of these two systems by where users started their search session. 
+
+------
+
+In this case it only makes sense to look at the time period after we redesigned the website, so August 2012 to August 2014.
+
+Here we see that 75.34% of search sessions in Summon start from the Find Box, while only 40% of catalog search sessions do. Catalog search sessions are almost as likely to start from the catalog home page. Origination from other sources is also pretty high, I think because we have some other entrance points like course reserves, a scoped media search, and a scoped music search, which all see a fair amount of use.
+
+------
+
+Let's talk about queries. Queries are interesting to look at because they show better than simple usage stats what's going on in each system and each interface. The problem is that it's much harder to show you the data in a presentation format, because it's all lists of terms. So I'm just going to show you a small subset, and hopefully that will get my point across.
+
+------
+
+In the catalog,
+
+------
+
+looking at overall catalog searching, we see that the top queries tend to be searches related to video games, films, television, and books. We also see some searches in the catalog for particular resources--reference sources and serials especially. This is just the top 20, but that trend continues in the rest of the top 100.
+
+------
+
+If we look just at searches conducted via the Find Box, we see similar sorts of things, but heavier on actual books (mostly reference books) than video games, film, and television. We also see a couple of topical searches.
+
+------
+
+If we looked at bigrams and trigrams, which I'm not going to go through for the sake of brevity, we'd see more topics appear. Music, history, and literature (in addition to the pop culture terms we've seen) are more prominent.
+
+------
+
+In Summon, 
+
+------
+
+we mostly see queries related to academic topics or current events. We also see quite a few searches for databases or other types of aggregate resources,
+
+------
+
+especially when we look at the queries conducted via the Find Box.
+
 
 Query analysis of course is tricky because there's a lot of data and a lot of variation. Looking at words, bigrams, and trigrams was one way to try to normalize and group queries. I've also attempted to characterize queries in two other ways: by looking at overall query length and by looking at search frequency distribution of the top 100 queries as a cumulative percentage of total searches.
 

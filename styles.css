@@ -3,3 +3,21 @@
 h1, .vcenter {
   padding: 0 !important;
 }
+
+.title {
+  font-weight: bold;
+  font-size: 560%;
+}
+
+table.data td, .slide p {
+  padding: 5px;
+  font-size: 130%;
+}
+
+table.data td.col1 {
+  width: 50%;
+}
+
+table.data td.col2 {
+  width: 50%;
+}
