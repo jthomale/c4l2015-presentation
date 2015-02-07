@@ -10,7 +10,7 @@ h1, .vcenter {
 }
 
 table.data td, .slide p {
-  padding: 5px;
+  padding: 5px 0 5px 20px;
   font-size: 130%;
 }
 
