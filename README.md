@@ -1,7 +1,9 @@
 # c4l2015-presentation
-This contains the slide deck for the Code4lib presentation, "You've Gotta Keep 'em Separated: The Case for Bento Box Discovery Interfaces," given by Jason Thomale on February 11th, 2015.
+This contains the slide deck for "You've Gotta Keep 'em Separated: The Case for Bento Box Discovery Interfaces," a presentation given by Jason Thomale at the Code4lib conference in Portland, OR on February 11th, 2015.
 
 ## Usage
-To view, just clone or download the repository and open up code4lib2015.html or code4lib2015_notes.html in a web browser.
+To view, just clone or download the repository and open up the file slides.html in a web browser.
 
-code4lib2015_notes.html contains presentation notes, which you can toggle on and off with the 'n' key.
+Presentation notes are included, which you can toggle on and off with the 'n' key.
+
+Printing the slides as-is will give you ~28 pages, including small versions of slides and notes. Modify print_styles.css if you want to enlarge slides or remove notes.
