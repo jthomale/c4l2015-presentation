@@ -1,0 +1,33 @@
+* {
+  position: initial !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.deck-prev-link,
+.deck-next-link,
+.deck-status,
+form.goto-form {
+  display: none;
+}
+
+.slide {
+  border-bottom: 1px solid #000;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+
+img {
+  width: 50px !important;
+  padding-top: 5px;
+}
+
+h1, h2 {
+  margin: 5px 0 !important;
+  opacity: .5 !important;
+}
+
+table {
+  display: none;
+}
