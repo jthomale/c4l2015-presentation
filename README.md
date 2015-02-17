@@ -13,3 +13,5 @@ Printing the slides as-is will give you ~28 pages, including small versions of s
 A written report that describes in a little more detail the data analysis discussed in the presentation can be found here: http://digital.library.unt.edu/ark:/67531/metadc499075/
 
 MS Excel files containing the data used to generate the charts and graphs in the report and the presentation can be found here: http://digital.library.unt.edu/ark:/67531/metadc498968/ (queries) and here: http://digital.library.unt.edu/ark:/67531/metadc498970/ (pageview/search stats).
+
+Raw data sets (CSV or Excel) are available upon request.
